@@ -15,12 +15,12 @@ const getForecast = () => {
     })
   })
   .then((res) => {
-    console.log(res.json());
-    // return res.json()
+    // console.log(res.json());
+    return res.json()
   })
-  // .then((swellData) => {
-  //   console.log(swellData);
-  // });
+  .then((swellData) => {
+    console.log(swellData);
+  });
 }
 
 getForecast();
