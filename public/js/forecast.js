@@ -20,6 +20,14 @@ const getForecast = () => {
   })
   .then((swellData) => {
     console.log(swellData);
+
+    fetch('/api/report', {
+      method: 'POST',
+      body: JSON.stringify({swellData}),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
   });
 }
 
