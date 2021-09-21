@@ -13,6 +13,8 @@ app.use(express.urlencoded({extended: true}));
 
 routes(app);
 
+console.log('made it here')
+
 app.listen(PORT, () => {
     console.log.apply(`Server running on port ${PORT}`);
 });

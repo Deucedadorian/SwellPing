@@ -1,4 +1,4 @@
-const getForecast = (app) => {
+function getForecast(app) {
   app.post('/api/report', (req, res) => {
     console.log(req.body);
     res.send('Completedd!');
