@@ -1,10 +1,9 @@
-const windy = require('./components/windyAPI');
+import Windy from './components/windyAPI';
 
 function App() {
   return (
     <div className="App">
-      {/* <button onClick={windy}>call</button> */}
-      {windy()}
+      <Windy />
     </div>
   );
 }

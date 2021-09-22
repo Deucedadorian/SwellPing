@@ -1,4 +1,6 @@
-const windyAPI = (location) => {
+const ReportDataContainer = () => {
+  
+  const windyAPI = (location) => {
 
     // API URL
     // const url = 'https://api.windy.com/api/point-forecast/v2';
@@ -34,12 +36,23 @@ const windyAPI = (location) => {
           fetch('/api/report', {
             method: "POST",
             // body: JSON.stringify({ swellData }),
-            body: "sweeet",
+            body: JSON.stringify({ "sweeet": 42 } ),
             headers: {
               "Content-Type": "application/json",
             },
-          });
+          }).then(res => {
+            console.log('fetch went through');
+          })
+
+          console.log('after fetch request');
         // });
+  }
+
+  return (
+    <button onClick={windyAPI}>Call weather Gods</button>
+  )
+
 }
 
-module.exports = windyAPI;
+
+export default ReportDataContainer;
