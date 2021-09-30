@@ -11,3 +11,5 @@ This App uses multiple surf and weather forecasting APIs as well as straight-up 
 [d3](https://github.com/d3)
 
 - [d3-shape](https://github.com/d3/d3-shape/)
+
+[axios](https://www.npmjs.com/package/axios)
