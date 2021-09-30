@@ -7,3 +7,7 @@ This App uses multiple surf and weather forecasting APIs as well as straight-up 
 ## Resources
 
 [WindyAPI](https://api.windy.com/point-forecast/docs)
+
+[d3](https://github.com/d3)
+
+- [d3-shape](https://github.com/d3/d3-shape/)
