@@ -5,21 +5,19 @@ function routeCreate(app) {
   
   app.post('/api/report', (req, res) => {
     location = { ...req.body };
-    console.log(location);
     axios({
       method: 'post',
-      url: process.env.API_KEY,
+      url: process.env.WINDY_API_URL,
       headers: {
         'Content-Type': 'application/json',
       },
-      data: JSON.stringify({
-            // ...location,
+      data: {
             lat: location.lat,
             lon: location.lon,
             model: "gfsWave",
             parameters: ["waves", "windWaves", "swell1", "swell2"],
-            key: "FqbKekr3KyB7MZuMTaTbYV30dDDAYmLz",
-          }),
+            key: process.env.WINDY_API_KEY,
+          },
     })
     .then((swellData) => {
       console.log(swellData);

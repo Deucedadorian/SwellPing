@@ -13,13 +13,6 @@ app.use(express.urlencoded({ extended: true }));
 
 routes(app);
 
-// app.post('/api', (req, res) => {
-//     console.log(req.body);
-//     res.send('Completedd!');
-//   });
-
-// app.post
-
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
