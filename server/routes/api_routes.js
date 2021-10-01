@@ -1,4 +1,5 @@
 const axios = require('axios');
+require('dotenv').config();
 
 function routeCreate(app) {
   
@@ -7,7 +8,7 @@ function routeCreate(app) {
     console.log(location);
     axios({
       method: 'post',
-      url: 'https://api.windy.com/api/point-forecast/v2',
+      url: process.env.API_KEY,
       headers: {
         'Content-Type': 'application/json',
       },
