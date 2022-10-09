@@ -1,28 +1,28 @@
 const ReportDataContainer = () => {
-  
-  const windyAPI = (location) => {
 
-    // // placeholder values
-    location = { "lat": 41.923, "lon": -69.974, }
+    const windyAPI = (location) => {
 
-    fetch('/api/report', {
-      method: "POST",
-      body: JSON.stringify({ ...location }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-    .then((res) => {
-      return res.json();
-    })
-    .then((data) => {
-      console.log(data);
-    });
-  }
+        // // placeholder values
+        location = { "lat": 41.923, "lon": -69.974, }
 
-  return (
-    <button onClick={windyAPI}>Call weather Gods</button>
-  )
+        fetch('/api/report', {
+            method: "POST",
+            body: JSON.stringify({ ...location }),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then((res) => {
+                return res.json();
+            })
+            .then((data) => {
+                console.log(data);
+            });
+    }
+
+    return (
+        <button onClick={windyAPI}>Call weather Gods</button>
+    )
 
 }
 
