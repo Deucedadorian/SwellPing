@@ -1,4 +1,4 @@
-# Swell-Checker
+# SwellPing
 
 ## Description
 
